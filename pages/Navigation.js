@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
 }));
 
-export default function Dashboard() {
+export default function Navigation(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -143,7 +143,8 @@ export default function Dashboard() {
           overflow: 'auto',
         }}
       >
-        <div className={classes.appBarSpacer} />
+        <div className={classes.appBarSpacer} style={{ marginBottom: 25 }} />
+        {props.children}
       </Box>
     </Box>
   );

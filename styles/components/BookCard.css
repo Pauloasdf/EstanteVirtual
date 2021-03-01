@@ -1,0 +1,8 @@
+.CardBook {
+    max-height: 150 !important;
+}
+
+.OuterBookCard {
+    margin: 15;
+    max-width: 150 !important;
+}
