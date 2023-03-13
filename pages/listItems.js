@@ -6,10 +6,19 @@ import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 import Link from 'next/link'
+import { AddRounded, PlusOneRounded, SearchRounded } from '@material-ui/icons';
 
 export function mainListItems() {
   return (
     <div>
+      <Link href="/Search">
+        <ListItem button>
+          <ListItemIcon>
+            <AddRounded />
+          </ListItemIcon>
+          <ListItemText primary="Adicionar" />
+        </ListItem>
+      </Link>
       <Link href="/">
         <ListItem button>
           <>
@@ -25,7 +34,7 @@ export function mainListItems() {
           <ListItemIcon>
             <ShoppingCartIcon />
           </ListItemIcon>
-          <ListItemText primary="Relatórios"/>
+          <ListItemText primary="Relatórios" />
         </ListItem>
       </Link>
     </div>
